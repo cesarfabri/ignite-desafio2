@@ -3,7 +3,7 @@ const { v4 } = require('uuid');
 const {
   users,
   checksTodoExists
-} = require('../../');
+} = require('../..');
 
 let response;
 let request;
@@ -44,7 +44,7 @@ describe('checksTodoExists', () => {
 
   it('should be able to put user and todo in request when both exits', () => {
     const todo = {
-      id: v4(),
+      id: '48c3b446-2921-46ab-b906-4ff083105a28',
       title: 'bip bip',
       deadline: new Date(),
       done: false,
@@ -52,7 +52,7 @@ describe('checksTodoExists', () => {
     }
 
     users.push({
-      id: v4(),
+      id: '47a16353-6c7d-46b2-b450-4473dac8d665',
       name: 'Atlas',
       username: 'atlas',
       pro: false,
